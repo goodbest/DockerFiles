@@ -33,4 +33,5 @@ CMD ss-server -s $SERVER_ADDR \
               -t $TIMEOUT \
               --fast-open \
               -d $DNS_ADDR \
-              -u
+              -u \
+              -A
