@@ -23,7 +23,8 @@ ENV PASSWORD=
 ENV METHOD      aes-256-cfb
 ENV TIMEOUT     300
 ENV DNS_ADDR    8.8.8.8
-ENV DNS_ADDR_2    8.8.4.4
+ENV DNS_ADDR_2  8.8.4.4
+ENV OTHER_ARGS=  
 
 EXPOSE $SERVER_PORT
 EXPOSE $SERVER_PORT/udp
@@ -36,4 +37,5 @@ CMD ss-server -s $SERVER_ADDR \
               --fast-open \
               -d $DNS_ADDR \
               -d $DNS_ADDR_2 \
-              -u
+              -u \
+              $OTHER_ARGS
